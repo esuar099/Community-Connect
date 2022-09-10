@@ -1,0 +1,26 @@
+{
+    "name": "community-prototype",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "front": "cd frontend && yarn start",
+        "front:i": "cd frontend && yarn",
+        "back": "cd backend && python3 manage.py runserver"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JuanGrajales/community-prototype.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JuanGrajales/community-prototype/issues"
+    },
+    "homepage": "https://github.com/JuanGrajales/community-prototype#readme",
+    "dependencies": {
+        "yarn": "^1.22.18"
+    }
+}

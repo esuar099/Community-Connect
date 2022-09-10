@@ -1,0 +1,154 @@
+@import "../../styles/_global.module.scss";
+
+.formGroup {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  margin: 25px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.registerBtn {
+  width: 100%;
+  margin-right: 0px;
+}
+
+.loginBtn {
+  background-color: #ffffff;
+  min-height: 150px;
+  min-width: 150px;
+  border-radius: 14px;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0px 6px 5px #00000080;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 7px;
+  width: 100%;
+}
+
+.loginLnk {
+  color: #0b3954;
+  font-family: $fontFamily;
+  font-size: 18px;
+  //margin-bottom: -3px;
+  //letter-spacing: 5px
+  //padding: 4px 4px 0px 4px;
+  //padding: 0;
+}
+
+.accountActns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exit {
+  position: absolute;
+  right: 0;
+  margin-left: 470px;
+  padding: 5px;
+  margin-right: 20px;
+  color: #172b4d;
+  font-size: 24px;
+  line-height: 24px;
+  text-shadow: none;
+  margin-bottom: 1rem;
+}
+
+.exit:hover {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.logo {
+  padding: 6px 12px 24px 12px;
+}
+
+.navMenuContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //align-self: flex-start;
+  //margin: 1rem;
+  margin: left 100px;
+}
+
+.navLink {
+  color: #0b3954;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: $fontFamily;
+  padding: 5%;
+}
+
+.navLink:hover {
+  color: #808080;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #e8e8e8;
+}
+
+.navLinkContainer {
+  list-style-type: none;
+  margin: 0 55px;
+}
+
+.navLinks {
+  color: #808080;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.forgotLink {
+  text-decoration: none;
+}
+
+// .checkboxRound {
+//   width: 12px;
+//   height: 12px;
+//   background-color: white;
+//   border-radius: 50%;
+//   vertical-align: middle;
+//   border: 1px solid $primaryColor;
+//   appearance: none;
+//   -webkit-appearance: none;
+//   outline: none;
+//   cursor: pointer;
+// }
+
+// .checkboxRound:checked {
+//   background-color: $primaryColor;
+// }
+
+// .checkbox_round {
+//   width: 12px;
+//   height: 12px;
+//   background-color: white;
+//   border-radius: 50%;
+//   vertical-align: middle;
+//   border: 1px solid $primaryColor;
+//   appearance: none;
+//   -webkit-appearance: none;
+//   outline: none;
+//   cursor: pointer;
+// }
+
+// .checkbox_round:checked {
+//   background-color: $primaryColor;
+// }

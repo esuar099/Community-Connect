@@ -1,0 +1,61 @@
+@import "../../../styles/_global.module.scss";
+.articleDisplay {
+  height: 50px;
+  margin-left: 25px;
+}
+
+.articleDate {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.articleTitle {
+  color: $primaryColor;
+}
+
+.cards {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 5px #00000080;
+  border-radius: 24px;
+  opacity: 1;
+  border-radius: 24px;
+  padding: 2px 10px;
+  display: flex;
+  flex-direction: column;
+  max-height: 650px;
+  min-width: 919px;
+}
+
+.underline {
+  border-bottom: 1px solid #a5b5bb;
+  text-align: left;
+  font: normal normal medium 18px/17px Poppins;
+  letter-spacing: 0px;
+  line-height: 17px;
+  color: #000000;
+  opacity: 1;
+  padding-bottom: 18px;
+  padding-top: 19px;
+  padding-left: 10px;
+  width: 100%;
+  display: block;
+  justify-content: space-around;
+}
+
+.underline:last-of-type {
+  border-bottom: none;
+  margin-bottom: 30px;
+}
+
+.underlineTitle {
+  text-align: left;
+  font: normal normal medium $fontFamily;
+  font-size: 20px;
+  letter-spacing: 1.58px;
+  color: #bf372c;
+  opacity: 1;
+  border-bottom: 2px solid #0b3954;
+  width: 100%;
+  font-weight: 500;
+  display: block;
+}

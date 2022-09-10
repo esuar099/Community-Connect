@@ -1,0 +1,29 @@
+@import "../../../../../styles/_global.module.scss";
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 1rem 1rem 4rem 1rem;
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, .5);
+}
+
+.formTitle {
+    text-align: center;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.toggleBtn {
+    box-shadow: none !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.selectedBtn {
+    background-color: $secondaryColor !important;
+}

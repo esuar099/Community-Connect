@@ -1,0 +1,47 @@
+.navItem {
+  padding: 10px 0;
+}
+
+.navButton {
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  float: right;
+  outline: none;
+}
+
+/* Class */
+.ccNavBar {
+  background-color: #111;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+.navLinks {
+  font-weight: bold;
+  height: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.showNavLinks {
+  height: 120px;
+}
+
+/* Media screen size */
+@media screen and (min-width: 768px) {
+  .navButton {
+    display: none;
+  }
+
+  .navLinks {
+    display: flex;
+    height: auto;
+  }
+
+  .navItem {
+    padding: 0 15px;
+  }
+}

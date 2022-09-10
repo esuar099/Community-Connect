@@ -1,0 +1,16 @@
+@import "../../styles/_global.module.scss";
+// The div containing all the cards on the page
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.container>* {
+    height: 520px;
+}
+
+// Applies margin to all the cards but the first (for when the calculator card gets added to do it automatically)
+.container>*:not(:first-child) {
+    margin-left: 60px;
+    width: 100%;
+}

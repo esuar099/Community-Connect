@@ -1,0 +1,33 @@
+@import "../../styles/_global.module.scss";
+// The div containing all the cards on the page
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.container>* {
+    height: 520px;
+}
+
+.container>*:not(:first-child) {
+    margin-left: 60px;
+    width: 100%;
+}
+
+.underConstruction {
+    font: normal normal bold 100px $fontFamily;
+    letter-spacing: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    opacity: .4;
+    height: 80px;
+    width: 100%;
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+    position: absolute;
+    left: 0px;
+    top: 440px;
+}

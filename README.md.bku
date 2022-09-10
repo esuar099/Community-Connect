@@ -1,0 +1,101 @@
+# Community Connect Prototype
+
+## Required Services
+- [Git](https://git-scm.com/downloads)
+- [Node v16.13.0](https://nodejs.org/en/download/)
+- [Yarn](https://classic.yarnpkg.com/en/docs/install)
+- [Python](https://www.python.org/downloads/)
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker-Compose](https://docs.docker.com/compose/install/) only if you're using Linux
+
+### Service installation guides for:
+| [MacOS](/docs/MacOS-Installation.md) | [Windows](/docs/Windows-Installation.md) | [Linux](/docs/Linux-Installation.md) |
+
+## Running Project Locally
+Once you've installed all of the required services, open a **Terminal Window** and follow these instructions:
+
+#### 1. Clone the repo
+
+```
+HTTPS
+$ git clone https://github.com/Lyrid9/community-prototype.git
+
+SSH
+$ git clone git@github.com:Lyrid9/community-prototype.git
+```
+
+#### 2. Navigate to the project's root directory (i.e. where package.json, docker-compose.yml, and .dockerignore files are located)
+```
+$ cd community-prototype
+```
+
+#### 3. Install node dependencies for the Frontend
+
+```
+$ yarn front:i
+```
+
+#### 4. Build the docker image
+```
+$ docker-compose build
+```
+
+#### 5. Make and migrate database models
+```
+This builds the DB models:
+$ docker-compose run web python manage.py makemigrations
+
+After the top command finishes executing, run the following:
+$ docker-compose run web python manage.py migrate
+```
+
+#### 6. Create an admin user for the Backend
+```
+$ docker-compose run web python manage.py createsuperuser
+```
+- You will be prompted to create an account with a username, email (not necessary), and password. 
+
+#### 7. Run the project
+
+```
+To run with live logs:
+$ docker-compose up
+
+To run in detached mode (no logs):
+$ docker-compose up -d
+```
+
+- Once completed, you should be able to go to http://localhost:3000 and view the website
+- You can also go to http://localhost:8000/admin to access the admin page of the backend service
+
+***Note:** It may take several seconds to load the first page.
+
+#### 8. Shutting down the project
+If you're running the project with the live logs, you can press `CTRL+C` to shutdown the project, followed by entering the following command:
+```
+This will remove all declared and anonymous volumes that were attached to the containers
+$ docker-compose down -v
+```
+- If you're running in detached mode, just run command above in the root directory of the project
+
+## Setting up the Backend Development Environment
+This section is only necessary if you are working in the Backend so you can get IntelliSense support from the used libraries.
+
+#### 1. Install pipenv
+```
+On Linux and Windows, run:
+$ pip3 install pipenv
+
+On MacOS, run:
+$ brew install pipenv
+```
+
+#### 2. Enter the shell environment
+```
+$ pipenv shell
+```
+
+#### 3. Installing all required packages
+```
+$ pip3 install -r backend/requirements.txt
+```

@@ -1,0 +1,40 @@
+@import "../../styles/_global.module.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: space-between;
+  height: 520px;
+}
+
+.cards {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 5px #00000080;
+  border-radius: 24px;
+  opacity: 1;
+  border-radius: 24px;
+  padding: 50px 25px 50px;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  min-width: 100%; //919px;
+}
+
+.title {
+  text-align: left;
+  font: normal normal bold 20px/24px Poppins;
+  letter-spacing: .8px;
+  color: #bf372c;
+  //border-bottom: 2px solid #0B3954;
+  //width: 100%;
+}
+
+@media (max-width: 1565px) {
+  .container {
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+

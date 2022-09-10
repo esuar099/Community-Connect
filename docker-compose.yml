@@ -1,0 +1,106 @@
+# This compose setup is only meant for local development
+# This is not for running your site in docker
+version: "3.0"
+services:
+  # postgres database
+  db:
+    image: postgres:14.3
+    volumes:
+      - ./backend/data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=v5T5RenGaP26Yb7R
+    #ports:
+      #  Do NOT expose db to host in production setup.
+      #- "5432:5432"
+    networks:
+      - network-backend
+  
+  # django api
+  web:
+    build: ./backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/code/
+    #ports:
+      # api can be access through http://localhost:8000
+      #- "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - network-middle
+      - network-backend
+
+  
+  # react nextjs frontend  
+  client:
+    build: ./frontend
+    command: sh -c "yarn build && yarn start"
+    volumes:
+      - ./frontend:/usr/src/app
+    environment:
+      - API_URL=http://community_web_1:8000
+      - WEB_URL=https://community-connect.fiu.edu/
+    #ports:
+      # client can be accessed through http://localhost:3000
+      #- "3000:3000"
+    networks:
+      - network-middle
+      - network-backend
+
+  nginx:
+    build: ./letsencrypt-docker-compose/nginx
+    image: community-connect/nginx
+    env_file:
+      - ./letsencrypt-docker-compose/config.env
+    volumes:
+      - nginx_conf:/etc/nginx/sites
+      - letsencrypt_certs:/etc/letsencrypt
+      - certbot_acme_challenge:/var/www/certbot
+      - ./letsencrypt-docker-compose/vhosts:/etc/nginx/vhosts
+      - ./letsencrypt-docker-compose/html:/var/www/html
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: unless-stopped
+
+    networks:
+      - network-frontend
+      - network-middle
+
+  certbot:
+    build: ./letsencrypt-docker-compose/certbot
+    image: community-connect/certbot
+    env_file:
+      - ./letsencrypt-docker-compose/config.env
+    volumes:
+      - letsencrypt_certs:/etc/letsencrypt
+      - certbot_acme_challenge:/var/www/certbot
+    networks:
+      - network-middle
+
+  cron:
+    build: ./letsencrypt-docker-compose/cron
+    image: community-connect/cron
+    environment:
+      COMPOSE_PROJECT_NAME: "${COMPOSE_PROJECT_NAME}"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./:/workdir:ro
+    restart: unless-stopped
+    networks:
+      - network-middle
+
+volumes:
+  nginx_conf:
+    external: true
+  letsencrypt_certs:
+    external: true
+  certbot_acme_challenge:
+
+networks:
+  network-backend:
+  network-middle:
+  network-frontend:

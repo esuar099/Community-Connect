@@ -1,0 +1,40 @@
+@import "../../../styles/_global.module.scss";
+
+.container {
+  text-decoration: none;
+}
+.trendsCard {
+  color: #096eb6;
+  margin: 24px 24px;
+  height: 250px;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px rgba(194, 191, 191, 0.6);
+}
+.trendsTitle {
+  height: 100px;
+}
+.trendsHeading {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.trendsTitleName {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.trendsDescription {
+  font-size: 1rem;
+}
+
+.trendsLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.trendsImage {
+  width: 120px;
+  border-radius: 15px;
+}

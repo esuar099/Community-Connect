@@ -1,0 +1,33 @@
+@import "../../../styles/_global.module.scss";
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menuItem,
+.menuItemSelected {
+  cursor: pointer;
+  padding: 1rem;
+  width: 8rem;
+  text-align: center;
+}
+.menuItem:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 0.15s ease;
+}
+.menuItemSelected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container {
+  border: 1px solid rgba(88, 88, 88, 0.1);
+}

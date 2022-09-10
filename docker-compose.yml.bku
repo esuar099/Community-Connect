@@ -1,0 +1,41 @@
+# This compose setup is only meant for local development
+# This is not for running your site in docker
+version: "3.0"
+services:
+  # postgres database
+  db:
+    image: postgres
+    volumes:
+      - ./backend/data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+  
+  # django api
+  web:
+    build: ./backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/code/
+    ports:
+      # api can be access through http://localhost:8000
+      - "8000:8000"
+    depends_on:
+      - db
+  
+  # react nextjs frontend  
+  client:
+    build: ./frontend
+    command: sh -c "yarn build && yarn start"
+    volumes:
+      - ./frontend:/usr/src/app
+    environment:
+      - API_URL=http://0.0.0.0:8000
+      - WEB_URL=https://community-connect.fiu.edu/
+    ports:
+      # client can be accessed through http://localhost:3000
+      - "3000:3000"

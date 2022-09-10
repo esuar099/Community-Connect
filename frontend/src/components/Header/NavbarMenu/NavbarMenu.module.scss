@@ -1,0 +1,104 @@
+@import "../../../styles/_global.module.scss";
+.registerBtn {
+    min-width: 100%;
+    margin-right: 0px;
+}
+
+.loginBtn {
+    background-color: #ffffff;
+    min-height: 115px;
+    max-width: 115px;
+    border-radius: 14px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0px 6px 5px #00000080;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 7px;
+}
+
+.loginLnk {
+    color: #0b3954;
+    font-family: $fontFamily;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.accountActns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 20px;
+}
+
+.exit {
+    position: absolute;
+    right: 0;
+    margin-left: 470px;
+    padding: 5px;
+    margin-right: 20px;
+    color: #172b4d;
+    font-size: 24px;
+    line-height: 24px;
+    text-shadow: none;
+    margin-bottom: 1rem;
+}
+
+.exit:hover {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.logo {
+    margin: 0px 0px 30px;
+    width: 300px;
+    max-height: auto;
+}
+
+.navMenuContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.navLink {
+    color: #0b3954;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: $fontFamily;
+    padding: 0px 20px;
+}
+
+.activeNavLink {
+    @extend .navLink;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #0b3954;
+}
+
+.navLink:hover,
+.activeNavLink:hover {
+    color: #808080;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #e8e8e8;
+}
+
+.navLinksContainer {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    margin: 0px 20px;
+}
+
+.forgotLink {
+    text-decoration: none;
+}

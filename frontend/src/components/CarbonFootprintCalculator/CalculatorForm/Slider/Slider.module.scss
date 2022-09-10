@@ -1,0 +1,59 @@
+@import "../../../../styles/_global.module.scss";
+
+.mainContainer {
+
+}
+
+.slider {
+    -webkit-appearance: none;
+    margin: 1rem 0;
+    height: 2px;
+    background: black;
+    width: 100%;
+    outline: none;
+}
+/* Special styling for WebKit/Blink */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    display: flex;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    align-items: center;
+    background: $primaryColor;
+}
+/* All the same stuff for Firefox */
+.slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    display: flex;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    align-items: center;
+    background: $primaryColor;
+}
+
+.slider::-ms-track {
+    cursor: pointer;
+}
+.sliderLabelContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sliderNumber{
+    text-align: center;
+    font-size: 0.9rem;
+    overflow: visible;
+    width: 2rem;
+}
+.sliderTick {
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+.sliderTitle {
+    margin-bottom: 1rem;
+}

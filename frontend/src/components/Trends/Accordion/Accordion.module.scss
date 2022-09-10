@@ -1,0 +1,17 @@
+.accordionCollapse {
+  width: 100%;
+}
+
+.accordionGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.accordionTitle {
+  background-color: #f5f5f5 !important;
+  border-color: #ddd !important;
+  color: #5e6c84 !important;
+  text-align-last: left;
+  width: 100%;
+}

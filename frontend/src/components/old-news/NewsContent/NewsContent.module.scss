@@ -1,0 +1,26 @@
+.content {
+  margin-right: 2%;
+  margin-left: 3%;
+  margin-top: 5%;
+  width: 90%;
+}
+
+.image {
+  display: block;
+  margin-right: 30px;
+  border-radius: 50%;
+  float: left;
+  width: 10%;
+}
+
+.paragraphs {
+  display: flow-root;
+}
+
+.title {
+  color: #0075b9;
+  text-align: left;
+  font: "GlacialIndifference-Regular";
+  letter-spacing: 0px;
+  font-size: 18px;
+}

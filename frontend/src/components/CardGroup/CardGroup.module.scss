@@ -1,0 +1,15 @@
+@import "../../styles/_global.module.scss";
+
+.cards {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+}

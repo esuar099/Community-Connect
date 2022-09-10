@@ -1,0 +1,76 @@
+@import "./_vars.module.scss";
+
+.actionButton {
+  background-color: $primaryColor !important;
+  border: 1px solid $primaryColor !important; // ??
+  // box-shadow: 0 4px 5px 0 rgb(231, 231, 231), 0 1px 10px 0 rgb(231, 231, 231),
+  // 0 2px 2px -1px rgb(231, 231, 231) !important; //Added shadows to buttons.
+  color: $buttonFontColor !important;
+  font-size: $buttonFontSize;
+
+  align-self: center;
+  font-family: $fontFamily;
+  //background: #0B3954 0% 0% no-repeat padding-box;
+  border: none;
+  box-shadow: 0px 6px 5px #00000080;
+  border-radius: 12px;
+  opacity: 1;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  padding: 5px;
+  margin-top: 15px;
+  // display: flex !important;
+  // justify-content: center;
+  // align-items: center;
+  // margin-bottom: 19px !important; //Ask Juan if adding margin to global styles is ok.
+  // margin-top: 6px !important;
+  // font-family: inherit;
+}
+
+.actionButton:hover {
+  background-color: $secondaryColor !important;
+  border: 1px solid $secondaryColor !important;
+  color: $buttonFontColor;
+}
+
+.cardHeading {
+  color: black;
+  font-family: inherit;
+  font-size: $cardHeadingFontSize !important;
+}
+
+.checkbox-round {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid $primaryColor;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  background-color: $primaryColor;
+}
+
+.checkboxRound {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid $primaryColor;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkboxRound:checked {
+  background-color: $primaryColor;
+}

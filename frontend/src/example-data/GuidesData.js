@@ -1,0 +1,66 @@
+const guidesArray = [
+    {
+        id: 0,
+        title: "How to put on a mask",
+        description: "Description",
+        url: "https://www.google.com",
+        image: "https://www.cdc.gov/coronavirus/2019-ncov/images/community/be-like-bobby-and-dad.JPG",
+    },
+    {
+        id: 1,
+        title: "How to make a face shield",
+        description: "Description",
+        url: "https://www.google.com",
+        image: "https://www.cdc.gov/coronavirus/2019-ncov/images/community/be-like-bobby-and-dad.JPG",
+    },
+    {
+        id: 2,
+        title: "How to protect yourself and your family",
+        description: "Description",
+        url: "https://www.google.com",
+        image: "https://www.cdc.gov/coronavirus/2019-ncov/images/community/be-like-bobby-and-dad.JPG",
+    },
+    {
+        id: 3,
+        title: "Where to get the COVID-19 vaccine",
+        description: "Description",
+        url: "https://www.google.com",
+        image: "https://www.cdc.gov/coronavirus/2019-ncov/images/community/be-like-bobby-and-dad.JPG",
+    },
+    {
+        id: 4,
+        title: "How to stay clean",
+        description: "Description",
+        url: "https://www.google.com",
+        image: "https://www.cdc.gov/coronavirus/2019-ncov/images/community/be-like-bobby-and-dad.JPG",
+    },
+    {
+        id: 5,
+        title: "Get a healthy Sun",
+        description: "Description",
+        url: "https://www.google.com",
+        image: "https://www.cdc.gov/coronavirus/2019-ncov/images/community/be-like-bobby-and-dad.JPG",
+    },
+    {
+        id: 6,
+        title: "Where to get the COVID-19 vaccine",
+        description: "Description",
+        url: "https://www.google.com",
+        image: "https://www.cdc.gov/coronavirus/2019-ncov/images/community/be-like-bobby-and-dad.JPG",
+    },
+    {
+        id: 7,
+        title: "How to stay clean",
+        description: "Description",
+        url: "https://www.google.com",
+        image: "https://www.cdc.gov/coronavirus/2019-ncov/images/community/be-like-bobby-and-dad.JPG",
+    },
+    {
+        id: 8,
+        title: "Get a healthy Sun",
+        description: "Description",
+        url: "https://www.google.com",
+        image: "https://www.cdc.gov/coronavirus/2019-ncov/images/community/be-like-bobby-and-dad.JPG",
+    },
+];
+export default guidesArray;

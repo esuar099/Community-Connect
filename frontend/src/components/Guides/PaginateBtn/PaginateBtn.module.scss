@@ -1,0 +1,27 @@
+@import "../../../styles/_global.module.scss";
+
+.paginateBtn {
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 5px rgba(194, 191, 191, 0.6);
+  background-color: white;
+  color: #f8c784;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.paginateBtn:hover {
+  color: white;
+  background-color: lightgrey;
+  transition: all 0.2s;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: flex-end;
+}

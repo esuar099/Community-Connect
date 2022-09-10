@@ -1,0 +1,72 @@
+@import "../../../styles/_global.module.scss";
+
+.title {
+  display: block;
+  height: 25px;
+  max-width: 26rem;
+  justify-content: left;
+  padding-top: 25px;
+  align-items: center;
+  color: #096eb6;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: $fontFamily;
+}
+
+.searchBox {
+  border-radius: 5px;
+  margin-top: 100px;
+  height: 65px;
+  max-width: 400px;
+  padding-left: 15px;
+  font-family: $fontFamily;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0px 3px 5px rgba(194, 191, 191, 0.6);
+}
+
+@media (min-width: 490px) {
+  .searchBox {
+    width: 400px;
+  }
+}
+
+.searchButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  height: 50px;
+  width: 50px;
+  margin-top: 107px;
+  margin-right: 10px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.searchBoxContainer {
+  position: relative;
+}
+
+.searchContainer {
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  margin-right: 80px;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+  margin-top: 5rem;
+}
+
+.searchIcon {
+  display: flex;
+  font-size: 35px;
+}

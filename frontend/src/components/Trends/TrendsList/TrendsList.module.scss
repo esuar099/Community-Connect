@@ -1,0 +1,16 @@
+.listGroup {
+  width: 70% !important;
+}
+.listItem {
+  border: none !important;
+  padding: 0.15rem 0.15rem !important;
+}
+.section {
+  border: none !important;
+  display: flex;
+  flex-wrap: wrap;
+  height: min-content;
+  justify-content: center;
+  
+  padding-bottom: 100px;
+}

@@ -1,0 +1,118 @@
+@import "../../../styles/_vars.module.scss";
+.container {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: space-evenly;
+    height: 520px;
+}
+
+.card {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 5px #00000080;
+    border-radius: 24px;
+    opacity: 1;
+    border-radius: 24px;
+    padding: 2px 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 70px 50px;
+    max-width: 670px;
+    height: 100%;
+}
+
+.heading {
+    font-family: $fontFamily;
+    color: #bf372c;
+    font-weight: bold;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-size: 20px;
+}
+
+.buttonSection {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    padding: 32px 0px 40px;
+}
+
+.mainButton {
+    background-color: $primaryColor !important;
+    border: 1px solid $primaryColor !important;
+    color: $buttonFontColor !important;
+    font-size: $buttonFontSize;
+    align-self: center;
+    font-family: $fontFamily;
+    box-shadow: 0px 6px 5px #00000080;
+    border-radius: 12px;
+    opacity: 1;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    padding: 5px 50px;
+    align-self: center;
+    vertical-align: middle;
+    margin: 0px;
+}
+
+.mainButton:hover {
+    background-color: $secondaryColor !important;
+    border: 1px solid $secondaryColor !important;
+    color: $buttonFontColor;
+}
+
+.infoSection {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 28px;
+}
+
+.infoObject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.infoObject>* {
+    align-self: center;
+}
+
+.infoIcon {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: auto;
+    align-self: center;
+}
+
+.infoLabel {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 17px;
+    font-family: $fontFamily;
+    font-weight: bold;
+    color: $primaryColor;
+}
+
+.infoDescription {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+    font-family: $fontFamily;
+    font-weight: bold;
+    color: $primaryColor;
+}
+
+.phoneImage {
+    height: 600px;
+    width: auto;
+    margin-left: 20px;
+    margin-bottom: -20px;
+}
